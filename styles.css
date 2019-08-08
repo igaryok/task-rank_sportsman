@@ -51,6 +51,7 @@ body {
     font-size: 20px;
     line-height: 23px;
     color: #2f4f4f;
+    display: block;
 }
 
 .extra {
@@ -61,10 +62,26 @@ body {
     color: #000;
 }
 
+.extra .sport::after {
+    content: ",";
+}
+
+.extra .pay::before {
+    content: "$";
+}
+
+.extra .pay::after {
+    content: "M";
+}
+
 .person:hover {
     padding: 10px;
     background: #eee;
     z-index: 2;
+}
+
+.person:hover .extra{
+    display: block;
 }
 
 @keyframes enlarge {
