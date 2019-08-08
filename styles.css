@@ -68,15 +68,12 @@ body {
     font-size: 18px;
     line-height: 21px;
     color: #000;
-    
-}
-
-.extra .sport::after {
-    content: ",";
+    position: relative;
+    z-index: 2;    
 }
 
 .extra .pay::before {
-    content: "$";
+    content: ", $";
 }
 
 .extra .pay::after {
@@ -86,18 +83,18 @@ body {
 .person:hover {
     position: relative;
     background: #eee;
-    z-index: 3;
+    z-index: 2;
     border-radius: 10px; 
-    padding: 10px;
+    box-shadow: 0 0 0 10px #eee;
     transition-duration: 1s;
     transition-timing-function: linear;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 .person:hover .extra{
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .person:hover .details {
@@ -110,6 +107,7 @@ body {
     height: 200px;
     border-radius: 60px;
     transition-duration: 1s;
+    transition-timing-function: linear;
 }
 
 @media (max-width: 750px) {
