@@ -1,0 +1,45 @@
+.people {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-column-gap: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+
+.rank {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    background-color: #fff;
+    position: absolute;
+    top: 82px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 18px;
+    color: #8b0000;
+}
+
+.name {
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.extra {
+    display: none;
+}
