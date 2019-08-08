@@ -6,7 +6,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
-    grid-row-gap: 40px;
     width: 890px;
     margin-top: 30px;
     margin-left: auto;
@@ -15,8 +14,7 @@ body {
 }
 
 .person {
-    position: relative;
-    z-index: 2;   
+    z-index: 1;   
 }
 
 .photo {
@@ -49,7 +47,6 @@ body {
 .details {
     display: grid;
     grid-row-gap: 9px;
-    position: relative;
 }
 
 .name {
@@ -62,14 +59,14 @@ body {
 }
 
 .extra {
-    display: none;
+    visibility: hidden;
+    display: flex;
     justify-content: center;
     font-family: Arial;
     font-size: 18px;
     line-height: 21px;
     color: #000;
-    position: relative;
-    z-index: 2;    
+    z-index: 3; 
 }
 
 .extra .pay::before {
@@ -92,9 +89,8 @@ body {
 }
 
 .person:hover .extra{
-    display: flex;
-    position: relative;
-    z-index: 2;
+    visibility: visible;
+    position: relative;    
 }
 
 .person:hover .details {
