@@ -55,3 +55,10 @@ body {
 .extra {
     display: none;
 }
+
+@media (max-width: 750px) {
+    .people{
+        grid-template-columns: repeat(2, 200px);
+        width: 430px;
+    }
+}
