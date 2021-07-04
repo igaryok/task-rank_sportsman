@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+}
+
+.people {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    width: 890px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+}
+
+.person {
+    z-index: 1;   
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+
+.rank {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    background-color: #fff;
+    position: absolute;
+    top: 82px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 18px;
+    color: #8b0000;
+}
+
+.details {
+    display: grid;
+    grid-row-gap: 9px;
+}
+
+.name {
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 23px;
+    color: #2f4f4f;
+    display: flex;
+    justify-content: center;
+}
+
+.extra {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    z-index: 3; 
+}
+
+.extra .pay::before {
+    content: ", $";
+}
+
+.extra .pay::after {
+    content: "M";
+}
+
+.person:hover {
+    position: relative;
+    background: #eee;
+    z-index: 2;
+    border-radius: 10px; 
+    box-shadow: 0 0 0 10px #eee;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transform: scale(1.2);
+}
+
+.person:hover .extra{
+    visibility: visible;
+    position: relative;    
+}
+
+.person:hover .details {
+    position: relative;
+    z-index: 1;
+}
+
+.person:hover .photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 60px;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+@media (max-width: 750px) {
+    .people{
+        grid-template-columns: repeat(2, 200px);
+        width: 430px;
+        margin-bottom: 155px;
+    }
+}
